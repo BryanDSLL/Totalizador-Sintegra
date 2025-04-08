@@ -1,0 +1,43 @@
+{
+  "name": "totalizador-sintegra",
+  "version": "1.0.0",
+  "description": "Aplicativo para totalizar dados do SINTEGRA",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "electron": "^35.1.1",
+    "electron-builder": "^24.0.0",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "build": {
+    "appId": "com.exemplo.totalizadorsintegra",
+    "productName": "Totalizador Sintegra",
+    "files": [
+      "**/*",
+      "node_modules/**/*",
+      "!node_modules/some-large-package/**/*",
+      "!node_modules/some-other-package/**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "asar": true,
+    "compression": "maximum",
+    "win": {
+      "icon": "IMG/logo.ico",  
+      "target": [
+        "portable"
+      ],
+      "publish": null
+    }
+  }
+}
